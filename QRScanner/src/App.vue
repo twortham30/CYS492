@@ -6,9 +6,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 <template>
   <header>
    
-<div class="mx-auto" style="">
-  Centered element
-</div>
+
     <div class="wrapper">
       <HelloWorld  />
 
