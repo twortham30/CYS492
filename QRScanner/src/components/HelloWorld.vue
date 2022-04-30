@@ -3,7 +3,9 @@
 <template>
 
 <div class="container-fluid mt-4">
- 
+<div class="bg-secondary mb-2 card">
+        <h1 class="mx-auto text-light" style="font-size:50px">User Input</h1>
+
     <div class="row justify-content-center">
         <div class="col-auto mb-3">
             <div class="card" style="width: 18rem; height:20rem;">
@@ -12,22 +14,13 @@
                    
                    <qrcode-vue :value="qrVal" :size="size" level="H" /> 
    
-              <label>QR input: <input class="text-indigo-600" v-model="value"></label>
-  <el-button class="m-8" type="primary" @click="create">Create</el-button>
+              <label>QR input: <input class=" text-light mt-3 bg-secondary rounded" v-model="value"></label>
+  <el-button class="mt-2 ml-20" type="primary" @click="create">Create</el-button>
      
                 </div>
             </div>
         </div>
-        <div class="col-auto mb-3">
-            <div class="card " style="width: 18rem; height:20rem;">
-                <div class="card-body overflow-scroll">
-                    <h5 class="card-title">Public Key:</h5>
-                 
-                    <p class="card-text"> {{this.publickey}}</p>
-                    
-                </div>
-            </div>
-        </div>
+       
          <div class="col-auto mb-3">
             <div class="card " style="width: 18rem; height:20rem;">
                 <div class="card-body overflow-scroll">
@@ -38,8 +31,14 @@
                 </div>
             </div>
         </div>
+         </div>
+    </div>
+    <div class="bg-primary card">
+      <h1 class="mx-auto text-light" style="font-size:50px">View User data</h1>
+    <div class="row justify-content-center  ">
+      
            <div class="col-auto mb-3">
-            <div class="card " style="width: 18rem; height:20rem;">
+            <div class="card " style="width: 10rem; height:20rem;">
                 <div class="card-body overflow-scroll">
                    <p class="decode-result">Decrypt: <b>{{ result }}</b></p>
 
@@ -56,8 +55,18 @@
                 </div>
             </div>
         </div>
+         <div class="col-auto mb-3">
+            <div class="card " style="width: 10rem; height:20rem;">
+                <div class="card-body overflow-scroll">
+                    <h5 class="card-title">Public Key:</h5>
+                 
+                    <p class="card-text"> {{this.publickey}}</p>
+                    
+                </div>
+            </div>
+        </div>
         <div class="col-auto mb-3">
-            <div class="card " style="width: 18rem; height:20rem;">
+            <div class="card " style="width: 10rem; height:20rem;">
                 <div class="card-body overflow-scroll">
                   <h5 class="card-title">Private Key:</h5>   {{privatekey}}
                     
@@ -65,7 +74,7 @@
             </div>
         </div>
          <div class="col-auto mb-3">
-            <div class="card " style="width: 18rem; height:20rem;">
+            <div class="card " style="width: 10rem; height:20rem;">
                 <div class="card-body overflow-scroll">
                      <p class="decode-result">Decrypted Text: <b>{{ result }}</b></p>
 
@@ -75,8 +84,10 @@
                     
                 </div>
             </div>
+            </div>
         </div>
-    </div>
+   
+</div>
 </div>
 </template>
 

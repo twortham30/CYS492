@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-background-color: #8B9EB7;
+background-color: #F8F7FF;
 }
+
+.card {
+
+    
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  }
